@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Rehman Ali | Mechanical Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+    </style>
+</head>
+<body style='background-color:white;color:#0a1f44;' class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600">Abdul<span class="text-gray-800">Rehman Ali</span></a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-blue-600 transition">About</a>
+                    <a href="#education" class="hover:text-blue-600 transition">Education</a>
+                    <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                    <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-3 pb-2">
+                <a href="#about" class="block py-2 hover:text-blue-600 transition">About</a>
+                <a href="#education" class="block py-2 hover:text-blue-600 transition">Education</a>
+                <a href="#skills" class="block py-2 hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="block py-2 hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="block py-2 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10 opacity-0 animate-fadeIn">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Abdul Rehman Ali</h1>
+                <h2 class="text-2xl md:text-3xl font-light mb-6">Mechanical Engineer | MSc Student at Aalto University</h2>
+                <p class="text-lg mb-8">Mechanical Engineering MSc student specializing in mechatronics, automation, and product development, with hands-on experience in CAD, simulation, manufacturing, and industrial leadership. Always motivated to learn, contribute to innovative engineering teams, and explore creativity through photography.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-blue-700 font-semibold px-5 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">Get in Touch</a>
+                    <a href="#projects" class="bg-transparent border-2 border-white text-white font-semibold px-5 py-3 rounded-lg hover:bg-white hover:text-blue-700 transition">View Projects</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 opacity-0 animate-fadeIn delay-200">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Abdul Rehman Ali" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto border-4 border-white shadow-xl">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Engineering Lab" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <p class="text-lg mb-6">Hi, I'm Abdul Rehman Ali! I am a Mechanical Engineer and MSc student at Aalto University, Finland, with a strong interest in mechatronics, automation, and innovative product development.</p>
+                    
+                    <p class="text-lg mb-6">My journey in engineering began when I disassembled my first remote-controlled car at age 10. Since then, my curiosity has only grown stronger, leading me to pursue a career where I can create solutions that positively impact our planet.</p>
+                    
+                    <p class="text-lg mb-6">When I'm not in the lab or working on projects, you can find me hiking, playing chess, or volunteering at local STEM workshops for high school students.</p>
+                    
+                    <div class="flex space-x-4 mt-8">
+                        <a href="https://www.linkedin.com/in/abdul-rehman-abb16a24a" class="text-blue-600 hover:text-blue-800 transition" title="LinkedIn">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition" title="GitHub">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition" title="Twitter">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition" title="Email">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Education & Experience</h2>
+            
+            <div class="relative timeline pl-10 max-w-3xl mx-auto">
+                <div class="mb-12 timeline-item relative opacity-0 animate-fadeIn">
+                    <h3 class="text-xl font-bold text-blue-600 mb-1">Aalto University (Finland)</h3>
+                    <p class="text-gray-600 mb-2">MSc Mechanical Engineering | Present</p>
+                    <p>Specializing in Sustainable Energy Systems with a minor in Computer Science. Focus: Mechatronics, Automation, Product Development</p>
+                    <p class="mt-2 text-gray-700"><strong>Key Courses:</strong> Thermodynamics, Fluid Mechanics, Materials Science, Control Systems, Machine Learning for Engineers</p>
+                </div>
+                
+                <div class="mb-12 timeline-item relative opacity-0 animate-fadeIn delay-100">
+                    <h3 class="text-xl font-bold text-blue-600 mb-1">Research Assistant</h3>
+                    <p class="text-gray-600 mb-2">MIT Energy Initiative | 2022 - Present</p>
+                    <p>Working with Prof. Sarah Chen on developing novel heat exchanger designs for more efficient solar thermal energy systems.</p>
+                </div>
+                
+                <div class="mb-12 timeline-item relative opacity-0 animate-fadeIn delay-200">
+                    <h3 class="text-xl font-bold text-blue-600 mb-1">Engineering Intern</h3>
+                    <p class="text-gray-600 mb-2">Atlas Honda | Pakistan</p>
+                    <p>Led production operations and workflow coordination for a 300-person manufacturing team, with experience in tooling, drawing study, quality, and energy-saving initiatives.</p>
+                </div>
+                
+                <div class="timeline-item relative opacity-0 animate-fadeIn delay-300">
+                    <h3 class="text-xl font-bold text-blue-600 mb-1">Cambridge Science Academy</h3>
+                    <p class="text-gray-600 mb-2">High School Diploma | 2016 - 2020</p>
+                    <p>Graduated with honors. Captain of the Robotics Team, led the team to state championship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Skills & Expertise</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition opacity-0 animate-fadeIn">
+                    <i class="fas fa-cogs text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Mechanical Design</h3>
+                    <p>Proficient in designing mechanical systems with focus on efficiency and sustainability. Experienced with both traditional and cutting-edge manufacturing techniques.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition opacity-0 animate-fadeIn delay-100">
+                    <i class="fas fa-laptop-code text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Software & Simulation</h3>
+                    <p>Skilled in CAD software (SolidWorks, AutoCAD), FEA analysis (ANSYS), and programming (MATLAB, Python) for engineering applications.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition opacity-0 animate-fadeIn delay-200">
+                    <i class="fas fa-solar-panel text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Renewable Energy</h3>
+                    <p>Specialized knowledge in solar thermal systems, wind energy technologies, and energy storage solutions. Familiar with energy efficiency standards and practices.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition opacity-0 animate-fadeIn delay-300">
+                    <i class="fas fa-microchip text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Electronics & Control</h3>
+                    <p>Experience with microcontrollers (Arduino, Raspberry Pi), sensors, and actuators for prototype development. Knowledge of control system design and implementation.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition opacity-0 animate-fadeIn delay-400">
+                    <i class="fas fa-flask text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Materials Science</h3>
+                    <p>Understanding of material properties, selection, and testing methodologies. Familiar with advanced materials including composites and smart materials.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition opacity-0 animate-fadeIn delay-500">
+                    <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Project Management</h3>
+                    <p>Experience leading engineering teams, managing project timelines, and presenting technical information to both technical and non-technical audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition opacity-0 animate-fadeIn">
+                    <div class="relative project-card">
+                        <img src="IMG_0406.jpg" alt="Solar Thermal System" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay">
+                            <button class="view-project-btn bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold" data-project="project1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Automated Core Cleaning System (PDP Project)</h3>
+                        <p class="text-gray-600 mb-4">Developing an automated mining core cleaning solution integrating steam, dual-brush cleaning, and conveyor automation (ongoing).</p>
+                        <div class="flex flex-wrap">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Renewable Energy</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Thermal Design</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">CAD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition opacity-0 animate-fadeIn delay-100">
+                    <div class="relative project-card">
+                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Autonomous Drone" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay">
+                            <button class="view-project-btn bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold" data-project="project2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Micron Precision Diameter Gauge (Bachelor Thesis)</h3>
+                        <p class="text-gray-600 mb-4">Designed an in-house micron-precision gauge for camshaft grinding, reducing cost by 60–70% while maintaining high accuracy.</p>
+                        <div class="flex flex-wrap">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Robotics</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Computer Vision</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition opacity-0 animate-fadeIn delay-200">
+                    <div class="relative project-card">
+                        <img src="IMG_9358.jpg" alt="Smart Prosthetic" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay">
+                            <button class="view-project-btn bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold" data-project="project3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Energy Saving Initiative (Atlas Honda)</h3>
+                        <p class="text-gray-600 mb-4">Implemented a break-based machine shutdown system to reduce idle power consumption and improve shop-floor energy efficiency.</p>
+                        <div class="flex flex-wrap">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Biomedical</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">3D Printing</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2 mb-2">Electronics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="modal-title" class="text-2xl font-bold text-blue-600"></h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="modal-content">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 opacity-0 animate-fadeIn">
+                    <form id="contact-form" class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition w-full">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 opacity-0 animate-fadeIn delay-200">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="mb-6 flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p>Helsinki, Finland</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 flex items-start">
+                            <i class="fas fa-envelope text-blue-600 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p>Abdul.ali@aalto.fi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8 flex items-start">
+                            <i class="fas fa-phone-alt text-blue-600 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-6">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fab fa-linkedin text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fab fa-github text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fab fa-twitter text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Alex<span class="text-blue-400">Johnson</span></h3>
+                    <p class="text-gray-400">Mechanical Engineer | MSc Student at Aalto University</p>
+                </div>
+                
+                <div class="text-center mb-4 md:mb-0">
+                    <p>&copy; 2023 Abdul Rehman Ali. All rights reserved.</p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Project modal functionality
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+        const projectButtons = document.querySelectorAll('.view-project-btn');
+        
+        // Project details data
+        const projectDetails = {
+            project1: {
+                title: "Automated Core Cleaning System (PDP Project)",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <img src="IMG_0406.jpg" alt="Solar Thermal System" class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                            <p class="mb-4">This project aimed to redesign conventional solar thermal collectors to improve efficiency for residential water heating applications.</p>
+                            <p><strong>Duration:</strong> 8 months (2022-2023)</p>
+                            <p><strong>Team Size:</strong> 3 members</p>
+                            <p><strong>My Role:</strong> Lead Designer & Thermal Analysis</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Key Innovations</h4>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li>Developed a novel absorber plate design with micro-channels that increased heat transfer by 35%</li>
+                        <li>Implemented selective coating that reduced radiative heat losses by 40%</li>
+                        <li>Designed an improved insulation system using aerogel-based materials</li>
+                        <li>Created a smart control system that optimizes flow rate based on solar intensity</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Results & Impact</h4>
+                    <p class="mb-6">The final prototype achieved 30% higher efficiency than conventional flat-plate collectors. The design was awarded first place in the MIT Sustainability Innovation Challenge and is currently being considered for a patent application.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">SolidWorks</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">ANSYS Thermal Analysis</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Arduino</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">MATLAB</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Rapid Prototyping</span>
+                        </div>
+                    </div>
+                `
+            },
+            project2: {
+                title: "Micron Precision Diameter Gauge (Bachelor Thesis)",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Autonomous Drone" class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                            <p class="mb-4">Designed and built an autonomous drone capable of inspecting wind turbine blades for damage, eliminating the need for dangerous manual inspections.</p>
+                            <p><strong>Duration:</strong> 10 months (2021-2022)</p>
+                            <p><strong>Team Size:</strong> 4 members</p>
+                            <p><strong>My Role:</strong> Mechanical Design & Computer Vision Integration</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Key Features</h4>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li>Custom-designed frame with foldable arms for easy transport</li>
+                        <li>Integrated high-resolution camera with stabilization gimbal</li>
+                        <li>Machine learning algorithm to detect and classify blade defects (cracks, erosion, delamination)</li>
+                        <li>Autonomous navigation system using GPS and computer vision for positioning</li>
+                        <li>Weather-resistant design capable of operating in winds up to 25 mph</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Results & Impact</h4>
+                    <p class="mb-6">Field tests showed the drone could detect defects as small as 2mm, with 92% accuracy compared to manual inspection. The system reduced inspection time by 75% and eliminated safety risks for human inspectors. We're currently working with a local wind farm to implement the system for regular maintenance inspections.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">3D Printing</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Carbon Fiber Composites</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Raspberry Pi</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Python/OpenCV</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">TensorFlow</span>
+                        </div>
+                    </div>
+                `
+            },
+            project3: {
+                title: "Energy Saving Initiative (Atlas Honda)",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <img src="IMG_9358.jpg" alt="Smart Prosthetic" class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                            <p class="mb-4">Developed a low-cost, customizable prosthetic hand with advanced functionality that adapts to different objects and tasks.</p>
+                            <p><strong>Duration:</strong> 12 months (2022-2023)</p>
+                            <p><strong>Team Size:</strong> 5 members (collaboration with Medical School)</p>
+                            <p><strong>My Role:</strong> Mechanical Design & Actuation Systems</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Key Innovations</h4>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li>Designed modular finger components that can be customized to the user's hand size</li>
+                        <li>Implemented myoelectric sensors that detect muscle signals from the residual limb</li>
+                        <li>Developed adaptive grip patterns that automatically adjust to object shape and required force</li>
+                        <li>Created a machine learning algorithm that learns from user behavior to improve grip selection</li>
+                        <li>Designed the entire system to be manufactured using consumer-grade 3D printers, reducing cost by 85% compared to commercial alternatives</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Results & Impact</h4>
+                    <p class="mb-6">The prosthetic hand was successfully tested with three users who reported significant improvements in daily task performance compared to their previous prosthetics. The design was published in the Journal of Assistive Technologies and all files were made open-source to support global access to affordable prosthetics.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Fusion 360</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">3D Printing (FDM & SLA)</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Arduino</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">EMG Sensors</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Servo Motors</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Machine Learning</span>
+                        </div>
+                    </div>
+                `
+            },
+            project4: {
+                title: "Advanced Battery Cooling System",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <img src="https://images.unsplash.com/photo-1611921057159-aea33f989a05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Battery System" class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                            <p class="mb-4">Designed an innovative cooling system for EV battery packs that improves thermal management, extends battery life, and enhances fast-charging capabilities.</p>
+                            <p><strong>Duration:</strong> 6 months (Summer 2023 Internship Project)</p>
+                            <p><strong>Team Size:</strong> Part of a 12-person engineering team</p>
+                            <p><strong>My Role:</strong> Thermal Design & CFD Simulation</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Key Innovations</h4>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li>Developed a novel phase-change material (PCM) integration that absorbs heat during rapid charging</li>
+                        <li>Designed optimized coolant flow channels that reduce temperature gradients across the pack by 60%</li>
+                        <li>Created a variable-flow control system that adjusts cooling intensity based on real-time temperature data</li>
+                        <li>Implemented a predictive thermal management algorithm that anticipates heating patterns based on driving conditions</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Results & Impact</h4>
+                    <p class="mb-6">The system demonstrated a 7% improvement in overall thermal efficiency compared to the current production design. It enabled 15% faster charging times while keeping cell temperatures within optimal ranges. The design concepts are being integrated into the next generation of the company's EV battery packs.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">ANSYS Fluent</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">SolidWorks</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">MATLAB</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Thermal Imaging</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Data Acquisition Systems</span>
+                        </div>
+                    </div>
+                `
+            },
+            project5: {
+                title: "Solar-Powered Water Purification",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Water Purification" class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                            <p class="mb-4">Created a portable, solar-powered water purification system designed for use in remote areas without access to clean water or electricity.</p>
+                            <p><strong>Duration:</strong> 9 months (2021-2022)</p>
+                            <p><strong>Team Size:</strong> 4 members</p>
+                            <p><strong>My Role:</strong> System Design & Solar Integration</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Key Features</h4>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li>Multi-stage purification system combining filtration, UV treatment, and solar distillation</li>
+                        <li>Compact design that can be transported by a single person and set up in under 10 minutes</li>
+                        <li>Solar panels with battery storage to ensure operation during cloudy periods</li>
+                        <li>Can produce up to 15 liters of clean drinking water per day from almost any water source</li>
+                        <li>Built with durable, low-cost materials that can be locally sourced for repairs</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Results & Impact</h4>
+                    <p class="mb-6">The system was field-tested in rural communities in Tanzania in partnership with Engineers Without Borders. It successfully removed 99.9% of pathogens and contaminants from local water sources. Five units were deployed and are still in operation, serving approximately 200 people daily. The design documentation has been shared with several humanitarian organizations for wider implementation.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Solar PV Systems</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">UV Sterilization</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Filtration Technology</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">CAD Design</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Water Quality Testing</span>
+                        </div>
+                    </div>
+                `
+            },
+            project6: {
+                title: "Automated Smart Greenhouse",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Smart Greenhouse" class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                            <p class="mb-4">Developed an IoT-controlled greenhouse system optimized for urban farming with minimal water and energy usage.</p>
+                            <p><strong>Duration:</strong> 7 months (2022)</p>
+                            <p><strong>Team Size:</strong> 3 members</p>
+                            <p><strong>My Role:</strong> System Architecture & Control Systems</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Key Innovations</h4>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li>Designed a modular hydroponic growing system that maximizes space efficiency</li>
+                        <li>Implemented a network of sensors monitoring temperature, humidity, light, CO2, and nutrient levels</li>
+                        <li>Created a machine learning algorithm that optimizes growing conditions for specific plant varieties</li>
+                        <li>Developed a precise irrigation system that reduces water usage by 40% compared to traditional methods</li>
+                        <li>Built a smartphone app for remote monitoring and control of all greenhouse parameters</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-2">Results & Impact</h4>
+                    <p class="mb-6">The prototype was installed at the MIT campus urban farm where it demonstrated 35% higher yield than conventional growing methods while using 40% less water and 30% less energy. The system won the Sustainable Innovation Award at the 2022 MIT Climate & Energy Prize. We're currently working with a local startup to commercialize the technology for home and community gardens.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Arduino/Raspberry Pi</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">IoT Sensors</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Mobile App Development</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Hydroponics</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Machine Learning</span>
+                        </div>
+                    </div>
+                `
+            }
+        };
+        
+        // Open modal with project details
+        projectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.getAttribute('data-project');
+                const project = projectDetails[projectId];
+                
+                modalTitle.textContent = project.title;
+                modalContent.innerHTML = project.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.animate-fadeIn').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
