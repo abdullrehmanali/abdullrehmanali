@@ -7,7 +7,16 @@
   <style>
     body {margin:0;font-family:Arial,sans-serif;background:#ffffff;color:#0a1f44;line-height:1.6;}
     header {background:#0a1f44;color:white;padding:60px 20px;text-align:center;}
-    header img {width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid white;margin-bottom:20px;}
+ header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: contain;        /* ✅ shows full image */
+  background: white;          /* ✅ fills empty space nicely */
+  padding: 6px;               /* ✅ cleaner border spacing */
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
     h1 {margin:10px 0;font-size:2.5rem;}
     h2 {color:#0a1f44;margin-top:40px;}
     .subtitle {font-size:1.2rem;opacity:0.9;}
@@ -26,16 +35,17 @@
   <img src="profile pic.png" alt="Abdul Rehman Ali">
   <h1>Abdul Rehman Ali</h1>
   <p class="subtitle">Mechanical Engineer | MSc Student at Aalto University</p>
-  <p>Product Development • CAD & Simulation • Mechatronics & Automation</p>
-  <p>Motivated engineer passionate about innovation, continuous learning, and exploring creativity through photography.</p>
+  <p>Mechatronics & Automation • Product Development • Project Management • CAD & Simulation • Manufacturing & Production</p>
+  <p>Motivated engineer passionate about innovation, continuous learning, and experimentation.</p>
 </header>
 
 <div class="container">
 <section>
   <h2>About Me</h2>
-  <p>I am a Mechanical Engineer and MSc student at <b>Aalto University, Finland</b>, specializing in mechatronics, automation, and product development.</p>
-  <p>My background combines academic knowledge with strong industrial exposure through leadership and manufacturing experience at Atlas Honda, as well as ongoing multidisciplinary engineering projects in Finland.</p>
-  <p>I am actively seeking opportunities in design engineering, simulation, R&D, product development, project management, and quality-focused roles.</p>
+<p> I am a Mechanical Engineer and current MSc student at Aalto University, Finland, with a strong interest in mechatronics, automation, and innovative product development. </p> 
+  <p> My engineering background combines academic knowledge with real industrial exposure through manufacturing and tooling experience at Atlas Honda, as well as ongoing multidisciplinary product development projects in Finland. </p> 
+  <p> I am actively seeking opportunities in design engineering, simulation, R&amp;D, product development, project or product management, and quality-focused engineering roles. I enjoy solving complex problems, working in collaborative teams, and continuously developing my technical and professional skills. </p> 
+  <p> Outside of engineering and studies, you can often find me playing chess, training at the gym, capturing moments through photography, or experimenting with cooking. </p>
 </section>
 
 <section>
@@ -52,8 +62,8 @@
   </div>
 </section>
 
-<section class="dark-section">
-  <h2>Work Experience</h2>
+  <section class="dark-section">
+  <h2 style="color:white;">Work Experience</h2>
 
   <div class="card">
     <h3>Assistant Manager Production — Atlas Honda Limited</h3>
